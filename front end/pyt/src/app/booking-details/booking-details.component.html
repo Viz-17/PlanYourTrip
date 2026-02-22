@@ -1,0 +1,74 @@
+<nav class="navbar navbar-expand-sm navbar-light navbar-custom">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand" routerLink="/home">
+      <!-- Logo is now cleanly positioned inside the Navbar -->
+      <img src="./assets/images/Plan Your Trip-1.png" alt="Plan Your Trip Logo">
+    </a>
+    <ul class="navbar-nav mx-auto gap-4">
+      <li class="nav-item">
+        <a routerLink="/home" routerLinkActive="active" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/home/about" routerLinkActive="active" class="nav-link">About</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/home/book" routerLinkActive="active" class="nav-link">Packages</a>
+      </li>
+    </ul>
+    <div class="d-flex align-items-center">
+      <ng-container *ngIf="!authService.isLoggedIn()">
+        <a routerLink="/login" class="nav-link"
+          style="color: var(--secondary); font-weight: 600; text-decoration: none;">Login</a>
+      </ng-container>
+      <ng-container *ngIf="authService.isLoggedIn()">
+        <button class="btn-signout" style="border-color: var(--secondary); color: var(--secondary) !important;"
+          (click)="authService.logout()">Sign Out</button>
+      </ng-container>
+      <a routerLink="/quote" class="btn btn-forest ms-3">Get a Quote</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrapper">
+  <div class="container py-5 mt-5 flex-grow-1 d-flex align-items-center justify-content-center">
+    <div class="booking-card w-100">
+      <div class="text-center mb-5">
+        <h2 class="form-title">Booking Details</h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <form (ngSubmit)="onSubmit()">
+        <div class="mb-4">
+          <label class="form-label custom-label fw-bold">Name</label>
+          <input type="text" class="form-control custom-input" name="name" [(ngModel)]="book.yourname" required readonly
+            style="background-color: #EFEFEF; color: #666666;">
+        </div>
+
+        <div class="mb-4">
+          <label class="form-label custom-label fw-bold">Package Name</label>
+          <select class="form-select custom-input" name="place" [(ngModel)]="book.place" required>
+            <option *ngFor="let trip of trips" [value]="trip.package_name">{{ trip.package_name }}</option>
+          </select>
+        </div>
+
+        <div class="mb-4">
+          <label class="form-label custom-label fw-bold">Check-in Date</label>
+          <input type="date" class="form-control custom-input" name="date" [(ngModel)]="book.date" required>
+        </div>
+
+        <div class="mb-5">
+          <label class="form-label custom-label fw-bold">No. of People</label>
+          <input type="number" class="form-control custom-input" name="nop" [(ngModel)]="book.nop" required>
+        </div>
+
+        <button type="submit" class="btn-confirm-booking">Confirm Booking</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer mt-auto">
+    <div class="container text-center">
+      <span>&copy; 2026 Plan Your Trip. All rights reserved.</span>
+    </div>
+  </footer>
+</div>

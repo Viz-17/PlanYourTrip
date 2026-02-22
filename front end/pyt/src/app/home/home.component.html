@@ -1,0 +1,74 @@
+<nav class="navbar navbar-expand-sm navbar-light navbar-custom transparent-mode">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand" routerLink="/home">
+      <!-- Logo is now cleanly positioned inside the Navbar -->
+      <img src="./assets/images/Plan Your Trip-1.png" alt="Plan Your Trip Logo"
+        style="filter: brightness(0) invert(1) drop-shadow(0 2px 4px rgba(0,0,0,0.5));">
+    </a>
+    <ul class="navbar-nav mx-auto gap-4">
+      <li class="nav-item">
+        <a routerLink="/home" routerLinkActive="active" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/home/about" routerLinkActive="active" class="nav-link">About</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/home/book" routerLinkActive="active" class="nav-link">Packages</a>
+      </li>
+    </ul>
+    <div class="d-flex align-items-center">
+      <ng-container *ngIf="!authService.isLoggedIn()">
+        <a routerLink="/login" class="nav-link"
+          style="color: var(--nav-text); font-weight: 600; text-decoration: none;">Login</a>
+      </ng-container>
+      <ng-container *ngIf="authService.isLoggedIn()">
+        <button class="btn-signout" (click)="authService.logout()">Sign Out</button>
+      </ng-container>
+
+      <a routerLink="/quote" class="btn btn-forest ms-3">Get a Quote</a>
+    </div>
+  </div>
+</nav>
+
+<div class="hero-image">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>Escape the Ordinary.<br>Explore the Extraordinary.</h1>
+    </div>
+    <a routerLink="/home/book" class="btn-hero-outline mt-4">Discover More</a>
+  </div>
+
+  <!-- Floating Booking Bar -->
+  <div class="floating-booking-bar container">
+    <div class="booking-card shadow">
+      <form class="row g-3 align-items-center mb-0">
+        <div class="col-md-3">
+          <label class="form-label text-muted small fw-bold mb-1">Destination</label>
+          <input type="text" class="form-control border-0 bg-light" placeholder="Where to?">
+        </div>
+        <div class="col-md-3">
+          <label class="form-label text-muted small fw-bold mb-1">Date</label>
+          <input type="date" class="form-control border-0 bg-light">
+        </div>
+        <div class="col-md-3">
+          <label class="form-label text-muted small fw-bold mb-1">People</label>
+          <select class="form-select border-0 bg-light">
+            <option selected>2 Adults</option>
+            <option>1 Adult</option>
+            <option>3 Adults</option>
+            <option>Family</option>
+          </select>
+        </div>
+        <div class="col-md-3 text-end d-flex align-items-end justify-content-end h-100">
+          <button type="submit" class="btn btn-forest w-100 py-2 mt-4" style="border-radius: 8px;">Search</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <span>&copy; 2026 Plan Your Trip. All rights reserved.</span>
+  </div>
+</footer>

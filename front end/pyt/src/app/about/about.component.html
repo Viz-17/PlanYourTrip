@@ -1,0 +1,60 @@
+<nav class="navbar navbar-expand-sm navbar-light navbar-custom">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand" routerLink="/home">
+      <img src="./assets/images/Plan Your Trip-1.png" alt="Plan Your Trip Logo">
+    </a>
+    <ul class="navbar-nav mx-auto gap-4">
+      <li class="nav-item">
+        <a routerLink="/home" routerLinkActive="active" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/home/about" routerLinkActive="active" class="nav-link">About</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/home/book" routerLinkActive="active" class="nav-link">Packages</a>
+      </li>
+    </ul>
+    <div class="d-flex align-items-center">
+      <ng-container *ngIf="!authService.isLoggedIn()">
+        <a routerLink="/login" class="nav-link"
+          style="color: var(--secondary); font-weight: 600; text-decoration: none;">Login</a>
+      </ng-container>
+      <ng-container *ngIf="authService.isLoggedIn()">
+        <button class="btn-signout" style="border-color: var(--secondary); color: var(--secondary) !important;"
+          (click)="authService.logout()">Sign Out</button>
+      </ng-container>
+      <a routerLink="/quote" class="btn btn-forest ms-3">Get a Quote</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrapper">
+  <div class="container py-5 mt-5 flex-grow-1">
+    <div class="card about-card border-0 shadow-sm p-5">
+      <div class="text-center mb-5">
+        <h2 class="section-title">About Us</h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <p class="lead mb-4" style="color: var(--text-main); line-height: 1.8;">
+            Plan Your Trip (PYT) is a premier online travel agency. Through our site, our versatile applications, and
+            our other related platforms, leisure and business travelers can explore, analyze costs, and book an
+            extensive variety of services tailored to their travel needs.
+          </p>
+          <p class="lead" style="color: var(--text-main); line-height: 1.8;">
+            Fulfilled workers lead to fulfilled clients. We know the growth and success of our organization depends on
+            satisfying our customers' needs every single day. That is our absolute guarantee.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer mt-auto">
+    <div class="container">
+      <span>&copy; 2026 Plan Your Trip. All rights reserved.</span>
+    </div>
+  </footer>
+</div>

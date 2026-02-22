@@ -1,0 +1,147 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --primary: #ffffff;
+  --accent: #2c5e3b;
+  /* Deep Forest Green */
+  --accent-2: #1e4228;
+  /* Darker Forest Green */
+  --secondary: #1e1b4b;
+  /* deep indigo black */
+  --text-main: #334155;
+  --text-muted: #64748b;
+  --bg-light: #f8fafc;
+  --nav-text: #f2efe9;
+  /* Warm Ivory */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--primary);
+  color: var(--text-main);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--secondary);
+}
+
+/* Transparent Navbar */
+.navbar-custom {
+  background: transparent;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 1.5rem 2rem;
+  transition: all 0.3s ease;
+}
+
+/* Specific transparent styling for hero pages (like home) */
+.navbar-custom.transparent-mode .nav-link {
+  color: var(--nav-text) !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.navbar-custom .nav-link {
+  color: var(--secondary) !important;
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin: 0 10px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover {
+  opacity: 0.8 !important;
+}
+
+.navbar-custom .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Fix Logo Placement */
+.navbar-brand img {
+  max-width: 180px;
+  max-height: 45px;
+  object-fit: contain;
+  /* Adding drop shadow to logo to make it visible against light images too */
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+/* Primary Forest Green Button */
+.btn-forest {
+  display: inline-block;
+  padding: 0.8rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff !important;
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+}
+
+.btn-forest:hover {
+  background: var(--accent-2);
+  border-color: var(--accent-2);
+  box-shadow: 0 5px 15px rgba(44, 94, 59, 0.4);
+}
+
+.btn-signout {
+  border: 1px solid #F2EFE9;
+  background: transparent;
+  color: #F2EFE9 !important;
+  border-radius: 20px;
+  padding: 6px 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-signout:hover {
+  background: var(--accent);
+  /* Deep Forest Green */
+  border-color: var(--accent);
+  color: #ffffff !important;
+}
+
+/* Premium Footer */
+.footer {
+  width: 100%;
+  padding: 20px 0;
+  background: var(--secondary);
+  text-align: center;
+  color: #e2e8f0;
+  font-size: 0.9rem;
+  margin-top: auto;
+  position: relative;
+  z-index: 10;
+}

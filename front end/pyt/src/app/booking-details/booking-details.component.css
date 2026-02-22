@@ -1,0 +1,79 @@
+.page-wrapper {
+    background-color: var(--nav-text);
+    /* Warm Ivory: #F2EFE9 */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.booking-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    max-width: 600px;
+}
+
+.form-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--accent);
+    /* Deep Forest Green: #2C5E3B */
+}
+
+.title-underline {
+    width: 50px;
+    height: 3px;
+    background: #d48c5b;
+    /* Terracotta */
+    margin: 0.5rem auto 0 auto;
+}
+
+.custom-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: #666666;
+    margin-bottom: 0.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.custom-input {
+    font-family: 'Inter', sans-serif;
+    background-color: #fafafa;
+    border: none;
+    border-bottom: 2px solid #e0e0e0;
+    border-radius: 0;
+    padding: 0.8rem 0.6rem;
+    transition: all 0.3s ease;
+    box-shadow: none !important;
+}
+
+.custom-input:focus {
+    background-color: #ffffff;
+    border-bottom-color: var(--accent);
+    /* Deep Forest Green */
+    outline: none;
+}
+
+.btn-confirm-booking {
+    background-color: #d48c5b;
+    /* Terracotta */
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    padding: 15px;
+    width: 100%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 1.05rem;
+}
+
+.btn-confirm-booking:hover {
+    background-color: #b36e44;
+    transform: translateY(-2px);
+    color: #ffffff;
+    box-shadow: 0 6px 15px rgba(212, 140, 91, 0.3);
+}

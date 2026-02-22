@@ -1,0 +1,84 @@
+.auth-page {
+    /* Full screen background image */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url("../../../src/assets/images/kerala.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.auth-card {
+    /* Warm Ivory background with frost/blur effect */
+    background: rgba(242, 239, 233, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 40px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.auth-logo {
+    max-width: 180px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.auth-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--accent);
+    /* Deep Forest Green */
+    margin-bottom: 0px;
+}
+
+.auth-input {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.auth-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 0.25rem rgba(44, 94, 59, 0.2);
+    outline: none;
+}
+
+.auth-link {
+    color: var(--accent);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.auth-link:hover {
+    color: var(--accent-2);
+    text-decoration: underline;
+}
+
+/* Redefining primary forest button for login layout */
+.btn-forest {
+    background-color: var(--accent);
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-forest:hover {
+    background-color: #1E4228;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(44, 94, 59, 0.4);
+    color: #ffffff;
+}
+
+label {
+    color: var(--secondary);
+    margin-bottom: 0.3rem;
+}

@@ -1,0 +1,30 @@
+<div class="auth-page">
+    <div class="auth-card shadow-lg">
+        <div class="text-center mb-4">
+            <img src="./assets/images/Plan Your Trip-1.png" alt="Tourly logo" class="auth-logo mb-3">
+            <h2 class="auth-title">Welcome Back</h2>
+        </div>
+
+        <form (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+                <label class="form-label fw-bold">User Name</label>
+                <input type="text" name="username" class="form-control auth-input" [(ngModel)]="log.name" required>
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label fw-bold">Password</label>
+                <input type="password" name="password" class="form-control auth-input" [(ngModel)]="log.password"
+                    required>
+            </div>
+
+            <div class="d-grid gap-2">
+                <button class="btn btn-forest rounded-pill py-2" type="submit">Log in</button>
+            </div>
+
+            <div class="text-center mt-4">
+                <span style="color: var(--text-muted);">Don't have an account? </span>
+                <a (click)="onsignup()" class="auth-link fw-bold" style="cursor: pointer;">Sign up</a>
+            </div>
+        </form>
+    </div>
+</div>

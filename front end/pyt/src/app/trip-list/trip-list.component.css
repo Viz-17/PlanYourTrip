@@ -1,0 +1,83 @@
+.admin-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  overflow-x: auto;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.custom-table thead th {
+  background-color: var(--accent);
+  /* Deep Forest Green */
+  color: #ffffff;
+  padding: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  border: none;
+}
+
+.custom-table thead th:first-child {
+  border-top-left-radius: 8px;
+}
+
+.custom-table thead th:last-child {
+  border-top-right-radius: 8px;
+}
+
+.custom-table tbody td {
+  padding: 15px;
+  vertical-align: middle;
+  border-bottom: 1px solid #f1f5f9;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-main);
+}
+
+.fw-montserrat {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--secondary);
+}
+
+.btn-terracotta {
+  background-color: #d48c5b;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  padding: 0.5rem 1.2rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.btn-terracotta:hover {
+  background-color: #b36e44;
+  transform: translateY(-2px);
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(212, 140, 91, 0.3);
+}
+
+.btn-danger-custom {
+  background-color: #ef4444;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  padding: 0.5rem 1.2rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.btn-danger-custom:hover {
+  background-color: #dc2626;
+  transform: translateY(-2px);
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(239, 68, 68, 0.3);
+}

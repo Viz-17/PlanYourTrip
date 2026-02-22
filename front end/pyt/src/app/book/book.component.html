@@ -1,0 +1,71 @@
+<nav class="navbar navbar-expand-sm navbar-light navbar-custom">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand" routerLink="/home">
+      <!-- Logo is now cleanly positioned inside the Navbar -->
+      <img src="./assets/images/Plan Your Trip-1.png" alt="Plan Your Trip Logo">
+    </a>
+    <ul class="navbar-nav mx-auto gap-4">
+      <li class="nav-item">
+        <a routerLink="/home" routerLinkActive="active" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/home/about" routerLinkActive="active" class="nav-link">About</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/home/book" routerLinkActive="active" class="nav-link">Packages</a>
+      </li>
+    </ul>
+    <div class="d-flex align-items-center">
+      <ng-container *ngIf="!authService.isLoggedIn()">
+        <a routerLink="/login" class="nav-link"
+          style="color: var(--secondary); font-weight: 600; text-decoration: none;">Login</a>
+      </ng-container>
+      <ng-container *ngIf="authService.isLoggedIn()">
+        <button class="btn-signout" style="border-color: var(--secondary); color: var(--secondary) !important;"
+          (click)="authService.logout()">Sign Out</button>
+      </ng-container>
+      <a routerLink="/quote" class="btn btn-forest ms-3">Get a Quote</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrapper">
+  <div class="container py-5 mt-5 flex-grow-1">
+    <div class="card tripbiz-card shadow-sm">
+      <div class="card-header bg-white border-0 text-center pt-5 pb-3">
+        <h2 class="section-title">Package List</h2>
+        <div class="title-underline"></div>
+      </div>
+      <div class="card-body px-5 pb-5">
+        <div class="table-responsive">
+          <table class="table table-hover align-middle">
+            <thead>
+              <tr>
+                <th class="text-uppercase text-muted">Package Name</th>
+                <th class="text-uppercase text-muted">No. of Days</th>
+                <th class="text-uppercase text-muted">Cost</th>
+                <th class="text-uppercase text-muted text-center">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let trip of trips">
+                <td class="fw-bold">{{ trip.package_name }}</td>
+                <td>{{ trip.days }} Days</td>
+                <td class="text-success fw-bold">₹{{ trip.cost }}</td>
+                <td class="text-center">
+                  <button (click)="bookTrip(trip.package_name)" class="btn-tripbiz btn-sm">Book</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer mt-auto">
+    <div class="container">
+      <span>&copy; 2026 Plan Your Trip. All rights reserved.</span>
+    </div>
+  </footer>
+</div>

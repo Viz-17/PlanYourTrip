@@ -1,0 +1,55 @@
+.quote-page {
+    background-color: var(--nav-text);
+    /* Warm Ivory Background: #F2EFE9 */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.quote-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    border-top: 5px solid var(--accent);
+    /* Deep Forest Green Line */
+}
+
+.success-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.title-underline {
+    width: 50px;
+    height: 3px;
+    background: var(--accent);
+    /* Deep forest green */
+    margin: 0 auto;
+}
+
+.quote-input {
+    background-color: #f8fafc;
+    border: 1px solid #cbd5e1;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.quote-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 0.25rem rgba(44, 94, 59, 0.2);
+    outline: none;
+}
+
+label {
+    color: var(--secondary);
+}

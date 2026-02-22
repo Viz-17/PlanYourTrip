@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-sm navbar-light navbar-custom">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand" routerLink="/admin">
+      <img src="./assets/images/Plan Your Trip-1.png" alt="Tourly logo">
+    </a>
+    <ul class="navbar-nav mx-auto gap-4">
+      <li class="nav-item">
+        <a routerLink="/admin" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+          class="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/admin/create-trip" routerLinkActive="active" class="nav-link">Add Package</a>
+      </li>
+    </ul>
+    <div class="d-flex">
+      <a routerLink="/home" class="btn btn-forest ms-3">Exit Admin</a>
+    </div>
+  </div>
+</nav>
+
+<div class="admin-page">
+  <div class="container py-5 mt-5">
+    <div class="text-center mb-5 mt-4">
+      <h1 class="admin-title">Admin / Manage Packages</h1>
+    </div>
+    <div class="admin-content">
+      <app-trip-list></app-trip-list>
+    </div>
+  </div>
+
+  <footer class="footer mt-auto">
+    <div class="container">
+      <span>&copy; 2026 Plan Your Trip. All rights reserved.</span>
+    </div>
+  </footer>
+</div>

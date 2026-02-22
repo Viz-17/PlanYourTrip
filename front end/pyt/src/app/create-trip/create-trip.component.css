@@ -1,0 +1,69 @@
+.admin-page {
+    background-color: var(--nav-text);
+    /* Warm Ivory: #F2EFE9 */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.admin-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--accent);
+    /* Deep Forest Green */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.title-underline {
+    width: 50px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0.5rem auto 0 auto;
+}
+
+.admin-input {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.admin-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 0.25rem rgba(44, 94, 59, 0.2);
+    outline: none;
+}
+
+label {
+    color: var(--secondary);
+    margin-bottom: 0.3rem;
+}
+
+.btn-terracotta {
+    background-color: #d48c5b;
+    /* Terracotta accent */
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+}
+
+.btn-terracotta:hover {
+    background-color: #b36e44;
+    transform: translateY(-2px);
+    color: #ffffff;
+    box-shadow: 0 6px 15px rgba(212, 140, 91, 0.3);
+}

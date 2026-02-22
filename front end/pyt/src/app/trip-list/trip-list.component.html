@@ -1,0 +1,26 @@
+<div class="admin-card">
+    <table class="table table-hover align-middle mb-0 custom-table">
+        <thead>
+            <tr>
+                <th>Package Name</th>
+                <th>No. of Days</th>
+                <th>Cost</th>
+                <th class="text-center">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let trip of trips">
+                <td class="fw-bold fw-montserrat">{{ trip.package_name }}</td>
+                <td>{{ trip.days }}</td>
+                <td class="text-success fw-bold">₹{{ trip.cost }}</td>
+                <td class="text-center">
+                    <button (click)="updateTrip(trip.id)" class="btn-terracotta btn-sm me-2">Update</button>
+                    <button (click)="deleteTrip(trip.id)" class="btn-danger-custom btn-sm">Delete</button>
+                </td>
+            </tr>
+            <tr *ngIf="trips.length === 0">
+                <td colspan="4" class="text-center py-4 text-muted">No packages found. Create one!</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

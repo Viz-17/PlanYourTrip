@@ -1,0 +1,16 @@
+.admin-page {
+     background-color: var(--nav-text);
+     /* Warm Ivory: #F2EFE9 */
+     min-height: 100vh;
+     display: flex;
+     flex-direction: column;
+}
+
+.admin-title {
+     font-family: 'Montserrat', sans-serif;
+     font-weight: 700;
+     color: var(--accent);
+     /* Deep Forest Green */
+     text-transform: uppercase;
+     letter-spacing: 1px;
+}

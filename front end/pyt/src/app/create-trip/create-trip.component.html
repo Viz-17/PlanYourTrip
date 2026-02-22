@@ -1,0 +1,66 @@
+<nav class="navbar navbar-expand-sm navbar-light navbar-custom">
+    <div class="container-fluid px-4">
+        <a class="navbar-brand" routerLink="/admin">
+            <img src="./assets/images/Plan Your Trip-1.png" alt="Tourly logo">
+        </a>
+        <ul class="navbar-nav mx-auto gap-4">
+            <li class="nav-item">
+                <a routerLink="/admin" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                    class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/admin/create-trip" routerLinkActive="active" class="nav-link">Add Package</a>
+            </li>
+        </ul>
+        <div class="d-flex">
+            <a routerLink="/home" class="btn btn-forest ms-3">Exit Admin</a>
+        </div>
+    </div>
+</nav>
+
+<div class="admin-page">
+    <div class="container py-5 mt-5 flex-grow-1">
+
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="admin-card">
+                    <div class="text-center mb-4 mt-2">
+                        <h3 class="admin-title">Create Package</h3>
+                        <div class="title-underline"></div>
+                    </div>
+
+                    <form (ngSubmit)="onSubmit()">
+                        <div class="mb-4">
+                            <label class="form-label fw-bold">Package Name</label>
+                            <input type="text" class="form-control admin-input" id="package_name"
+                                [(ngModel)]="trip.package_name" name="package_name" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label fw-bold">No. of Days</label>
+                            <input type="text" class="form-control admin-input" id="days" [(ngModel)]="trip.days"
+                                name="days" required>
+                        </div>
+
+                        <div class="mb-5">
+                            <label class="form-label fw-bold">Cost (₹)</label>
+                            <input type="text" class="form-control admin-input" id="cost" [(ngModel)]="trip.cost"
+                                name="cost" required>
+                        </div>
+
+                        <div class="d-grid">
+                            <button class="btn-terracotta py-3" type="submit">Upload Package</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer mt-auto">
+        <div class="container">
+            <span>&copy; 2026 Plan Your Trip. All rights reserved.</span>
+        </div>
+    </footer>
+</div>

@@ -1,0 +1,45 @@
+.page-wrapper {
+    background-color: var(--bg-light);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.tripbiz-card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    margin-top: 2rem;
+}
+
+.section-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    color: var(--secondary);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.5rem;
+}
+
+.title-underline {
+    width: 60px;
+    height: 3px;
+    background: var(--accent-gradient);
+    margin: 0 auto;
+}
+
+.table th {
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #eee;
+}
+
+.table td {
+    padding: 1rem 0.5rem;
+    vertical-align: middle;
+}
+
+.btn-tripbiz.btn-sm {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.85rem;
+}
